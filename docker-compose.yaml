@@ -1,12 +1,14 @@
 version: '2'
 services:
   backend:
+    image: momojunzi/bagua-server
     build: ./server/
     ports:
       - "3001:3001"
     volumes:
       - ./server:/usr/src/app
   frontend:
+    image: momojunzi/bagua-client
     build: ./client/
     ports:
       - "3000:3000"
